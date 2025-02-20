@@ -10,7 +10,9 @@ html {
 
 .page {
   inline-size: 1200px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   block-size: 100%;
   margin: auto;
   color: #fff;
@@ -46,12 +48,6 @@ ol {
   block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
-}
-
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .content {
@@ -171,7 +167,6 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  flex-direction: row;
   gap: 15px;
 }
 
@@ -228,7 +223,6 @@ ol {
 
 .more-button {
   width: 100%;
-  
 }
 
 .content__details {
@@ -349,15 +343,6 @@ ol {
 }
 
 .content__video-card-description {
-  display: -webkit-box; /* Необходимо для работы -webkit-line-clamp */
-  display: -moz-box; /* Поддержка для Firefox  */
-  display: box; /* Стандартное свойство */
-  -webkit-box-orient: vertical; /* Вертикальное направление для WebKit */
-  -moz-box-orient: vertical; /* Поддержка для Firefox */
-  box-orient: vertical; /* Стандартное свойство */
-  -webkit-line-clamp: 3; /* Ограничение строк для WebKit */
-  -moz-line-clamp: 3; /* Поддержка для Firefox */
-  line-clamp: 3; /* Стандартное свойство */
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
