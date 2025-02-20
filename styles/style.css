@@ -96,10 +96,6 @@ ol {
   margin-bottom: 5px;
 }
 
-.search-form__checkbox-list {
-  display: flex;
-}
-
 .search-form__label {
   width: fit-content;
   display: flex;
@@ -357,5 +353,5 @@ ol {
   min-height: 103px;
   padding-right: 3px;
   object-fit: cover;
-  object-position: top right;
+  object-position: center;
 }
