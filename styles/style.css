@@ -54,7 +54,8 @@ ol {
   display: flex;
   justify-content: center; /* Было center */
   gap: 30px;
-  margin-top: -16.5px;
+  align-items: center;
+  height: 100vh;
 }
 
 .result {
@@ -123,10 +124,9 @@ ol {
 
 .search-form__textfield {
   min-width: 225px;
-  border-top: 1px solid white;
-  border-right: none;
-  border-bottom: 1px solid white;
-  border-left: none;
+  border: 1px solid transparent; /* Прозрачные границы */
+  border-top-color: white;
+  border-bottom-color: white;
   color: rgba(255, 255, 255, 0.7);
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
@@ -142,8 +142,7 @@ ol {
 }
 
 .search-form__textfield:active {
-  border-right: 1px solid white;
-  border-left: 1px solid white;
+  border-color: white;
 }
 
 .search-form__textfield:focus {
@@ -192,7 +191,7 @@ ol {
   line-height: 21.6px;
   background-color: transparent;
   cursor: pointer;
-  height: 34px;
+  min-height: 34px;
 }
 
 .button:active {
@@ -219,6 +218,7 @@ ol {
 
 .more-button {
   width: 100%;
+  margin-top: 30px;
 }
 
 .content__details {
@@ -235,7 +235,7 @@ ol {
   font-weight: 700;
   font-size: 75px;
   line-height: 70.5px;
-  height: 210px;
+  display: block;
   width: 260px;
   text-transform: uppercase;
   padding-top: 3px;
@@ -253,6 +253,7 @@ ol {
 .content__list-container {
   position: relative;
   max-height: 298px;
+  top: -5px;
   overflow-y: auto;
   padding-right: 3px; /* Отступ от кнопки */
 }
@@ -261,7 +262,11 @@ ol {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 0;
+}
+
+.content__list-item:last-child {
+  margin-bottom: 0; /* Убираем нижний отступ у последнего элемента */
 }
 
 .content__list-item {
@@ -310,24 +315,18 @@ ol {
 
 .content__video-card {
   display: flex;
-  flex-direction: row;
-  width: 390px;
-  height: 103px;
+  justify-content: space-between;
 }
 
 .content__video-card-description-container {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  width: 100%;
-  height: 100%;
+  width: 195px;
   overflow: hidden;
-  flex-grow: 1;
 }
 
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
   font-weight: 700;
+  padding-bottom: 6px;
   font-size: 30px;
   line-height: 30px;
   text-transform: uppercase;
@@ -342,15 +341,14 @@ ol {
   font-family: "Fira Sans Condensed", sans-serif;
   font-weight: 400;
   font-size: 18px;
-  text-indent: 2px;
   line-height: 16.2px;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
 .content__video-card-thumbnail {
-  min-width: 194px;
-  min-height: 103px;
+  width: 194px;
+  height: 103px;
   padding-right: 3px;
   object-fit: cover;
   object-position: center;
